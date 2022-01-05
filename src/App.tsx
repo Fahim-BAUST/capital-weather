@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Capitalweather from './Pages/Capitalweather';
+import Country from './Pages/Country';
+import Details from './Pages/Details';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Country />} />
+        <Route path="/country" element={<Country />} />
+        <Route path="/details/:search" element={<Details />} />
+        <Route path="/weather/:capital" element={<Capitalweather />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
