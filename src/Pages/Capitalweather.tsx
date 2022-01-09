@@ -32,7 +32,7 @@ const Capitalweather = () => {
     }, [])
     return (
 
-        <Box sx={{ mt: 10, textAlign: "center" }}>
+        <Box data-testid='capital' sx={{ mt: 10, textAlign: "center" }}>
 
             <Typography variant='h3'>Current Weather - {capital}</Typography>
             {loading ? <LinearProgress color="secondary" />

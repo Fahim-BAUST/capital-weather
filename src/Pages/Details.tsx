@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Button, Container, LinearProgress, TextField, Typography } from '@mui/material';
+import { Button, Container, LinearProgress, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
 interface CountryTypes {
@@ -16,7 +16,7 @@ interface CountryTypes {
         png: string
     }
 }
-const Details = () => {
+const Details: React.FC = () => {
 
     const { search } = useParams<{ search: string }>()
     const [country, setCountry] = useState<CountryTypes[]>([])
@@ -38,7 +38,7 @@ const Details = () => {
         fetchData()
     }, [])
     return (
-        <Container sx={{ width: "50%", mx: "auto", my: 4 }}>
+        <Container data-testid='details' sx={{ width: "50%", mx: "auto", my: 4 }}>
             {loading ? <LinearProgress color="secondary" />
                 : <Box sx={{ my: 4 }}>
                     <Typography variant='h3' sx={{ mb: 3 }}>Country Details</Typography>

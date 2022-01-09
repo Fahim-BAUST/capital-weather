@@ -6,14 +6,16 @@ import Details from './Pages/Details';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Country />} />
-        <Route path="/country" element={<Country />} />
-        <Route path="/details/:search" element={<Details />} />
-        <Route path="/weather/:capital" element={<Capitalweather />} />
-      </Routes>
-    </BrowserRouter>
+    <div data-testid='app'>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Country />} />
+          <Route path="/country" element={<Country />} />
+          <Route path="/details/:search" element={<Details />} />
+          <Route path="/weather/:capital" element={<Capitalweather />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
 
   );
 }

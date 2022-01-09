@@ -2,9 +2,9 @@ import { Button, Container, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Country = () => {
+const Country: React.FC = () => {
 
     const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ const Country = () => {
 
 
     return (
-        <Container sx={{ width: "50%", mx: "auto", my: 15 }}>
+        <Container data-testid="country" sx={{ width: "50%", mx: "auto", my: 15 }}>
 
             <Box>
                 <Typography variant='h4'> Search with Country Name</Typography>
